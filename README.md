@@ -1,96 +1,159 @@
-# Weather Forecasting Mobile App
+# 🌤️ Weather Forecasting Mobile App
 
-A React Native weather app built with Expo that provides current weather conditions and 5-day forecasts for any city worldwide.
+A React Native mobile application built with Expo for real-time weather forecasting and 5-day weather predictions. This educational project demonstrates modern mobile app development practices including API integration, component-based architecture, and environment variable management.
 
-## Features
+## 🚀 Features
 
-- 🌤️ Current weather conditions
-- 📅 5-day weather forecast
-- 🌡️ Temperature unit switching (Celsius/Fahrenheit)
-- 🌙 Dark/Light mode toggle
-- 🔍 City search functionality
-- 📱 Cross-platform (iOS, Android, Web)
+- **Real-time Weather Data**: Get current weather conditions for any city
+- **5-Day Forecast**: View detailed weather predictions for the next 5 days
+- **Dark/Light Mode**: Toggle between dark and light themes for better user experience
+- **Unit Conversion**: Switch between Metric (°C) and Imperial (°F) units
+- **Responsive Design**: Beautiful, modern UI with reusable components
+- **Secure API Integration**: Environment variable management for API keys
+- **Error Handling**: User-friendly error messages and loading states
+- **Search Functionality**: Search weather by city name
 
-## Prerequisites
+## 🛠️ Technologies Used
 
-- Node.js (version 14 or higher)
+- **React Native** - Mobile app framework
+- **Expo** - Development platform and toolchain
+- **TypeScript** - Type-safe JavaScript
+- **OpenWeatherMap API** - Weather data provider
+- **react-native-dotenv** - Environment variable management
+- **Expo Router** - Navigation and routing
+
+## 📱 Screenshots
+
+*Screenshots will be added soon*
+
+## ⚙️ Installation
+
+### Prerequisites
+
+- Node.js (v14 or higher)
 - npm or yarn
-- Expo CLI (`npm install -g @expo/cli`)
-- An OpenWeatherMap API key
+- Expo CLI
+- OpenWeatherMap API key
 
-## Getting Started
+### Setup Instructions
 
-### 1. Get an API Key
-
-1. Visit [OpenWeatherMap](https://openweathermap.org/api)
-2. Sign up for a free account
-3. Generate an API key
-
-### 2. Setup the Project
-
-1. Clone or download this project
-2. Navigate to the project directory:
+1. **Clone the repository**
    ```bash
-   cd my-app
+   git clone https://github.com/AzadehZam/-weather-forecasting-mobile-app.git
+   cd -weather-forecasting-mobile-app
    ```
-3. Install dependencies:
+
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-### 3. Configure API Key
+3. **Set up environment variables**
+   - Create a `.env` file in the root directory
+   - Add your OpenWeatherMap API key:
+     ```
+     WEATHER_API_KEY=your_api_key_here
+     ```
+   - Get your free API key from [OpenWeatherMap](https://openweathermap.org/api)
 
-Open `app/(tabs)/index.tsx` and replace `'your_openweathermap_api_key_here'` with your actual API key:
+4. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-```typescript
-const apiKey = 'your_actual_api_key_here';
+5. **Run the app**
+   - Scan the QR code with Expo Go app (Android/iOS)
+   - Or press `i` for iOS simulator
+   - Or press `a` for Android emulator
+   - Or press `w` for web browser
+
+## 🏗️ Project Structure
+
+```
+weather-forecasting-mobile-app/
+├── app/
+│   ├── (tabs)/
+│   │   ├── index.tsx          # Main weather app screen
+│   │   └── explore.tsx        # Explore tab
+│   ├── _layout.tsx            # Root layout
+│   └── +not-found.tsx         # 404 page
+├── components/
+│   ├── SearchBar.tsx          # City search component
+│   ├── WeatherCard.tsx        # Current weather display
+│   ├── Forecast.tsx           # 5-day forecast component
+│   └── LoadingSpinner.tsx     # Loading indicator
+├── types/
+│   └── env.d.ts              # Environment variable types
+├── assets/                    # Images and icons
+├── constants/                 # App constants
+├── .env                      # Environment variables (not in git)
+├── babel.config.js           # Babel configuration
+└── package.json             # Dependencies and scripts
 ```
 
-### 4. Run the App
+## 🔑 API Configuration
 
-Start the development server:
-```bash
-npm start
-```
+This app uses the OpenWeatherMap API for weather data. To set up:
 
-This will open the Expo developer tools. You can then:
-- Press `i` to run on iOS simulator
-- Press `a` to run on Android emulator
-- Press `w` to run on web browser
-- Scan the QR code with the Expo Go app on your phone
+1. Visit [OpenWeatherMap](https://openweathermap.org/api)
+2. Sign up for a free account
+3. Generate an API key
+4. Add the key to your `.env` file as shown above
 
-## Usage
+**Note**: The `.env` file is not tracked by git for security reasons.
 
-1. **Search for a city**: Type a city name in the search bar and tap "Search"
-2. **View current weather**: See temperature, weather description, humidity, and wind speed
-3. **Check forecast**: Scroll through the 5-day forecast horizontally
-4. **Switch units**: Toggle between Celsius and Fahrenheit
-5. **Change theme**: Switch between light and dark mode
+## 🎯 Usage
 
-## Components
+1. **Search for Weather**: Enter a city name in the search bar
+2. **View Current Weather**: See temperature, description, and weather conditions
+3. **Check Forecast**: Scroll down to view the 5-day weather forecast
+4. **Toggle Units**: Switch between Celsius and Fahrenheit
+5. **Change Theme**: Toggle between dark and light mode
 
-- **SearchBar**: City input and search functionality
-- **WeatherCard**: Displays current weather conditions
-- **Forecast**: Shows 5-day weather forecast
-- **LoadingSpinner**: Loading indicator during API calls
+## 🧩 Components
 
-## API
+- **SearchBar**: Handles city search input and validation
+- **WeatherCard**: Displays current weather information
+- **Forecast**: Shows 5-day weather forecast with daily details
+- **LoadingSpinner**: Provides loading feedback during API calls
 
-This app uses the [OpenWeatherMap API](https://openweathermap.org/api) for weather data:
-- Current Weather Data API
-- 5 Day Weather Forecast API
+## 🎓 Educational Purpose
 
-## Technologies Used
+This project was created as part of the **UBC Bootcamp** curriculum to demonstrate:
 
-- React Native
-- Expo
-- TypeScript
-- OpenWeatherMap API
+- React Native mobile app development
+- API integration and data fetching
+- State management with React hooks
+- Component-based architecture
+- Environment variable security
+- TypeScript implementation
+- Modern UI/UX practices
 
-## Contributing
+## 🤝 Contributing
 
-Feel free to submit issues and enhancement requests!
+This is an educational project, but contributions are welcome! Feel free to:
 
-## License
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- [OpenWeatherMap](https://openweathermap.org/) for providing the weather API
+- [Expo](https://expo.dev/) for the excellent development platform
+- UBC Bootcamp for the educational guidance
+- React Native community for the amazing ecosystem
+
+## 📞 Contact
+
+- GitHub: [@AzadehZam](https://github.com/AzadehZam)
+- Project Link: [https://github.com/AzadehZam/-weather-forecasting-mobile-app](https://github.com/AzadehZam/-weather-forecasting-mobile-app)
+
+---
+
+⭐ If you found this project helpful, please give it a star!
